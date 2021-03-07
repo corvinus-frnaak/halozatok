@@ -1,0 +1,46 @@
+﻿/*A <div> elementekre vonatkozó selector-nál érdemes beállítani egy vékony keretet, mert így könnyebb átlátni, hogy mi is történik*/
+/* margin és padding garantálja, hogy a keretek nem érnek egymáshoz, az elemekhez, és az ablak keretéhez*/
+div {
+    text-align: justify;
+    margin: 2% 25%;
+    padding: 10px;
+    border: 5px dotted white;
+    border-radius: 25px;
+    
+}
+html {
+    background-color: #86D98E;
+}
+body {
+    text-align: center;
+}
+
+a {
+    padding: 10px;
+    border-radius: 20px;
+    color:black;
+    
+}
+
+    a:hover {
+        /* vegyük észre, hogy örökli a tulajdonságokat a szülőtől, egyet közülük felülírunk*/
+        
+        background-color: white;
+    }
+div:hover {
+    background-color: #A4DBA9;
+}
+span {
+    font-weight: bold;
+}
+
+.lista {
+    line-height: 3em;
+    text-align: left;
+}
+
+img {
+    display: block;
+    margin: auto;
+    border-radius: 20px;
+}
