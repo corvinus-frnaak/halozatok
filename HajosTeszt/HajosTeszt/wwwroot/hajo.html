@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hajós teszt</title>
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        div {
+            margin: 10px;
+            border: 1px solid gray
+        }
+
+        #külső {
+            height: 100%;
+            flex-direction: column;
+        }
+
+        #kérdés_szöveg {
+        }
+
+        #középső {
+            display: flex;
+            flex-direction: row;
+            flex-grow: 1;
+        }
+
+        #válaszok {
+            flex-grow: 0.7;
+            flex-shrink: 0.7;
+        }
+
+        #vezérlő {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        #kép {
+            flex-grow: 0.3;
+            flex-shrink: 0.3;
+        }
+
+        .gomb {
+            padding: 20px;
+            width: 80px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .kerdes {
+        }
+
+        .kattintható:hover {
+            background-color: lightgray;
+            color: black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="külső">
+        <div id="kérdés_szöveg">
+            Kérdés szövege
+        </div>
+        <div id="középső">
+            <div id="válaszok">
+                <div id="válasz1" class="kerdes kattintható">Válasz 1</div>
+                <div id="válasz2" class="kerdes kattintható jó">Válasz 2</div>
+                <div id="válasz3" class="kerdes kattintható rossz">Válasz 3</div>
+            </div>
+            <div id="kép">
+                <img id="kép1" src="https://szoft1.comeback.hu/hajo/teszt-0050.jpg" />
+            </div>
+        </div>
+        <div id="vezérlő">
+            <div class="gomb kattintható">Vissza</div>
+            <div class="gomb kattintható">Előre</div>
+        </div>
+    </div>
+</body>
+</html>
