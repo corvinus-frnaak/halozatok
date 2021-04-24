@@ -27,8 +27,8 @@ window.onload = function () {
 
     }
 };
-function letöltés() {
-    fetch('/questions.json')
+/*function letöltés() {
+    fetch('/questions/1')
         .then(resp => resp.json())
         .then(dat => letöltésBef(dat));
 
@@ -37,7 +37,19 @@ function letöltésBef(data) {
     console.log("Sikeres letöltés!")
     kérdések = data
     kérdésMegjelenítés(kérdésSz);
-}
+}*/
+function kérdésBetöltés(id) {
+    fetch(`/questions/${id}`)
+        .then(response => {
+            if (!response.ok) {
+                console.error(`Hibás válasz: ${response.status}`)
+            }
+            else {
+                return response.json()
+            }
+        })
+        .then(data => kérdésMegjelenítés(data));
+}    
 var kérdésMegjelenítés = function (kérdésSz) {
     document.getElementById("kérdés_szöveg").innerHTML = kérdések[kérdésSz].questionText;
     document.getElementById("kép1").src = "https://szoft1.comeback.hu/hajo/" + kérdések[kérdésSz].image
