@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hajós teszt</title>
-    <script src="hetedik.js"></script>
+    <script src="tizedik.js"></script>
     <style>
         html, body {
             height: 100%;
@@ -51,7 +51,14 @@
             text-align: center;
             border-radius: 10px;
         }
-
+        .jó{
+            background-color: forestgreen;
+            color:white;
+        }
+        .rossz {
+            background-color: red;
+            color: white;
+        }
         .kerdes {
         }
 
@@ -69,12 +76,12 @@
         </div>
         <div id="középső">
             <div id="válaszok">
-                <div id="válasz1" class="kerdes kattintható">Válasz 1</div>
-                <div id="válasz2" class="kerdes kattintható jó">Válasz 2</div>
-                <div id="válasz3" class="kerdes kattintható rossz">Válasz 3</div>
+                <div id="válasz1" onclick="valasztas(1)" class="kerdes kattintható">Válasz 1</div>
+                <div id="válasz2" onclick="valasztas(2)" class="kerdes kattintható">Válasz 2</div>
+                <div id="válasz3" onclick="valasztas(3)" class="kerdes kattintható">Válasz 3</div>
             </div>
             <div id="kép">
-                <img id="kép1" src="https://szoft1.comeback.hu/hajo/teszt-0050.jpg" />
+                <img id="kép1" src="" />
             </div>
         </div>
         <div id="vezérlő">

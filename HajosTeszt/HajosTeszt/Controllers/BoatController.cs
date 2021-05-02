@@ -32,5 +32,14 @@ namespace HajosTeszt.Controllers
 
             return new JsonResult(kérdés);
         }
+        [HttpGet]
+        [Route("questions/count")]
+        public int M4() 
+        {
+            hajostesztContext context = new hajostesztContext();
+            int kérdésekSzáma = context.Questions.Count();
+
+            return kérdésekSzáma;
+        }
     }
 }
