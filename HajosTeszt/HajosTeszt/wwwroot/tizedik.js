@@ -47,7 +47,7 @@ function init() {
     if (localStorage.getItem("hotlist")) { hotList = json.parse(localStorage.getItem("hotlist"));}
     if (localStorage.getItem("displayedQuestion")) { displayedQuestion = parseInt(localStorage.getItem("displayedQuestion")); }
     if (localStorage.getItem("nextQuestion")) { nextQuestion = parseInt(localStorage.getItem("nextQuestion")); }
-    if (hotList.length === 0) {
+    if (!localStorage.getItem("hotList")) {
         for (let i = 0; i < questionsInHotList; i++) {
             kérdésBetöltés(nextQuestion, i);
             nextQuestion++;
